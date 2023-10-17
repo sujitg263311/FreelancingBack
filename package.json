@@ -1,0 +1,16 @@
+{
+  "name": "freelancingback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && cd GigGenius && yarn run dev",
+    "server": "cd api && yarn start",
+    "start": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "devDependencies": {
+    "concurrently": "^1.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
