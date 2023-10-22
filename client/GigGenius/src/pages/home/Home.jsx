@@ -1,11 +1,11 @@
-import React from "react";
-import "./Home.scss";
-import Featured from "../../components/featured/Featured";
-import TrustedBy from "../../components/trustedBy/TrustedBy";
-import Slide from "../../components/slide/Slide";
-import CatCard from "../../components/catCard/CatCard";
-import ProjectCard from "../../components/projectCard/ProjectCard";
-import { cards, projects } from "../../data";
+import React from 'react';
+import './Home.scss';
+import Featured from '../../components/featured/Featured';
+import TrustedBy from '../../components/trustedBy/TrustedBy';
+import Slide from '../../components/slide/Slide';
+import CatCard from '../../components/catCard/CatCard';
+import ProjectCard from '../../components/projectCard/ProjectCard';
+import { cards, projects } from '../../data';
 
 function Home() {
   return (
@@ -42,8 +42,8 @@ function Home() {
               Protected payments, every time
             </div>
             <p>
-              Always know what you'll pay upfront. Your payment isn't released
-              until you approve the work.
+              Always know what you will pay upfront. Your payment is not
+              released until you approve the work.
             </p>
             <div className="title">
               <img src="./img/check.png" alt="" />
@@ -151,7 +151,7 @@ function Home() {
         <div className="container">
           <div className="item">
             <h1>
-              liverr <i>business</i>
+              GigGenius <i>business</i>
             </h1>
             <h1>
               A business solution designed for <i>teams</i>
@@ -174,7 +174,7 @@ function Home() {
               <img src="./img/check.png" alt="" />
               Manage teamwork and boost productivity with one powerful workspace
             </div>
-            <button>Explore Liverr Business</button>
+            <button>Explore GigGenius Business</button>
           </div>
           <div className="item">
             <img
