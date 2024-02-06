@@ -142,7 +142,7 @@ function Gig() {
               </div>
               <div className="item">
                 <img src="/img/recycle.png" alt="" />
-                <span>{data.revisionNUmber} Revisions</span>
+                <span>{data.revisionNumber} Revisions</span>
               </div>
             </div>
             <div className="features">
