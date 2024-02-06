@@ -5,6 +5,15 @@ import { Link, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import newRequest from '../../utils/newRequest';
 import Reviews from '../../components/reviews/Reviews';
+import { RelatedProducts } from '@algolia/recommend-react';
+import recommend from '@algolia/recommend';
+
+const recommendClient = recommend(
+  'JBZK23VAR3',
+  'edd87b30d734d2050b4e3040c1a91703'
+);
+
+const indexName = 'Gigs';
 
 function Gig() {
   const { id } = useParams();

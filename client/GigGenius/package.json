@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@algolia/recommend-react": "^1.14.0",
+    "@babel/runtime": "^7.23.9",
     "@stripe/react-stripe-js": "^2.4.0",
     "@stripe/stripe-js": "^2.3.0",
     "@tanstack/react-query": "^5.0.0",

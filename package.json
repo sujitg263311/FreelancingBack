@@ -12,5 +12,8 @@
     "concurrently": "^1.0.0"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@algolia/recommend": "^4.22.1"
+  }
 }
