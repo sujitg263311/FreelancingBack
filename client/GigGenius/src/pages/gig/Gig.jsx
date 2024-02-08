@@ -13,7 +13,7 @@ const recommendClient = recommend(
   'edd87b30d734d2050b4e3040c1a91703'
 );
 
-const indexName = 'Gigs';
+const indexName = 'Gigs2';
 
 function Gig() {
   const { id } = useParams();
@@ -25,6 +25,38 @@ function Gig() {
         return res.data;
       }),
   });
+
+  function RelatedItem({ item }) {
+    return (
+      <Link to={`/gig/${item.objectID}`} className="link">
+        <div className="gigCard">
+          <img src={item.cover} alt="" />
+          <div className="info">
+            <div className="user">
+              <img src={data.img || '/img/noavatar.jpg'} alt="" />
+              <span>{data.username}</span>
+            </div>
+            <p>{item.desc}</p>
+            <div className="star">
+              <img src="../../../public/img/star.png" alt="star img" />
+              <span>
+                {!isNaN(item.totalStars / item.starNumber) &&
+                  Math.round(item.totalStars / item.starNumber)}
+              </span>
+            </div>
+          </div>
+          <hr />
+          <div className="detail">
+            <img src="../../../public/img/heart.png" alt="" />
+            <div className="price">
+              <span>STARTING AT</span>
+              <h2>$ {item.price}</h2>
+            </div>
+          </div>
+        </div>
+      </Link>
+    );
+  }
 
   const userId = data?.userId;
 
@@ -136,6 +168,14 @@ function Gig() {
                 </div>
               </div>
             )}
+            <div className="relatedProducts">
+              <RelatedProducts
+                recommendClient={recommendClient}
+                indexName={indexName}
+                objectIDs={[id]}
+                itemComponent={RelatedItem}
+              />
+            </div>
             <Reviews gigId={id} />
           </div>
           <div className="right">
