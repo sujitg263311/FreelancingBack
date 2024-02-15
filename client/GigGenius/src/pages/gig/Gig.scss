@@ -157,6 +157,13 @@
           }
         }
       }
+      .relatedProducts {
+        display: flex;
+        align-items: center;
+        object-fit: contain;
+        width: 100px;
+        margin-right: 50px;
+      }
     }
 
     .right {
@@ -171,6 +178,7 @@
       max-height: 500px;
       position: sticky;
       top: 150px;
+      background-color: white;
 
       .price {
         display: flex;

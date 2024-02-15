@@ -7,6 +7,8 @@ import newRequest from '../../utils/newRequest';
 import Reviews from '../../components/reviews/Reviews';
 import { RelatedProducts } from '@algolia/recommend-react';
 import recommend from '@algolia/recommend';
+import { HorizontalSlider } from '@algolia/ui-components-horizontal-slider-react';
+import '@algolia/ui-components-horizontal-slider-theme';
 
 const recommendClient = recommend(
   'JBZK23VAR3',
@@ -174,6 +176,7 @@ function Gig() {
                 indexName={indexName}
                 objectIDs={[id]}
                 itemComponent={RelatedItem}
+                view={HorizontalSlider}
               />
             </div>
             <Reviews gigId={id} />
